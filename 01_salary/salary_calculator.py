@@ -3,6 +3,10 @@ def total_salary(path: str) -> list or None:
     try:
         with open(path, encoding='utf-8') as file:
             for line in file:
+                # ігноруємо порожні рядки
+                if len(line.strip()) == 0:
+                    continue
+
                 _, salary = line.strip().split(',')
 
                 if not salary.isdigit():
