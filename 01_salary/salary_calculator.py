@@ -1,7 +1,7 @@
 def total_salary(path: str) -> list or None:
     salaries = []
     try:
-        with open(path, encoding='utf-8') as file:
+        with open(path) as file:
             for line in file:
                 # ігноруємо порожні рядки
                 if len(line.strip()) == 0:
